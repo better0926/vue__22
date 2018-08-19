@@ -1,0 +1,45 @@
+.layout * {
+  display: flex;
+  overflow: auto;
+}
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+.flexContent {
+  flex: 1;
+}
+.columnContent {
+  flex: 1;
+  flex-direction: column;
+}
+.textFont {
+  font-size: 32px;
+}
+.textColor {
+  color: #111111;
+}
+.detailTextFont {
+  font-size: 28px;
+}
+.detailTextColor {
+  color: #999999;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.footBtn {
+  background-color: #5a9df3;
+  height: 100px;
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.btn-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
