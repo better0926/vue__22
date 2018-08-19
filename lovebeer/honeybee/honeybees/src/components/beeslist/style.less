@@ -1,0 +1,89 @@
+
+.beeslist {
+  position: relative;
+  height: 100%;
+  padding: 1rem /* 54/54 */ 0;
+}
+.content{
+  display: flex;
+  height: 100%;
+  ::-webkit-scrollbar {
+    /*隐藏滚轮*/
+    display: none;
+    }
+  background-color: #fff;
+  .content-left {
+    width: 80px;
+    overflow-y: scroll;
+    background-color: rgba(246,246,246,0.95);
+  }
+  .slide li {
+    height: 1.018519rem /* 55/54 */;
+    line-height: 1.018519rem /* 55/54 */;
+    text-align: center;
+    font-size: .296296rem /* 16/54 */;
+    border-left: 3px solid transparent;
+    border-bottom: 1px solid #ccc;
+    &.active {
+      border-left: 3px solid #090;
+    }
+    &.new{
+      background-image: url(../../assets/new.jpg)
+    }
+  }
+  // 展示new 图片
+  .menu {
+    display: block;
+    background: right top no-repeat;
+    background-size: auto 70%;
+  }
+
+  // 右侧内容区域
+  .main {
+    flex: 1;
+    padding-top: .740741rem /* 40/54 */;
+    .main-list {
+      overflow-y: scroll;
+      height: 100%;
+    }
+    .main-title {
+      top: 0;
+      left: 0;
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+      height: .740741rem /* 40/54 */;
+      border-bottom: 1px solid #ccc;
+      font-size: .259259rem /* 14/54 */;
+    }
+  }
+  .list {
+    display: flex;
+    height: 1.851852rem /* 100/54 */;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    .img {
+      width: 60px;
+    }
+    .center {
+      flex: 1;
+      font-size: .296296rem /* 16/54 */;
+      .weight {
+        margin-top: .185185rem /* 10/54 */;
+        color: #ccc;
+      }
+      .price {
+        font-size: .259259rem /* 14/54 */;
+        .newprice {
+          color: red;
+          font-weight: bolder;
+        }
+        .oldprice {
+          text-decoration: line-through;
+          color: #666;
+        }
+      }
+    }
+  }
+}

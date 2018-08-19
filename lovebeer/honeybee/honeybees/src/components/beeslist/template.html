@@ -1,0 +1,48 @@
+<div class="beeslist">
+  <beesHeader></beesHeader>
+  <div class="content">
+    <!-- 左侧菜单栏 -->
+    <div class="content-left">
+      <ul class="slide">
+        <li class="menu"
+          v-for="(item,index) in categories"
+          :key="item.id"
+          :class="{ new: !item.icon, active: cateIndex === index }"
+          @click="selectTab(index,item.id)">
+          <span>{{ item.name }}</span>
+        </li>
+      </ul>
+    </div>
+    <!-- 右侧商品列表项 -->
+    <div class="main rel">
+      <ul class="main-title abs">
+        <li class="title">全部分类</li>
+        <li class="title">综合排序</li>
+      </ul>
+      <div class="main-list">
+        <ul class="main-content">
+          <li class="list" v-for="list in selectGoods" :key="list.id">
+            <div class="img">
+              <img :src="list.img" alt="">
+            </div>
+            <div class="center">
+              <p class="tlt">{{list.name}}</p>
+              <p class="weight">{{list.specifics}}</p>
+              <div class="price">
+                <span class="newprice">&yen;{{list.partner_price}}</span>
+                <span class="oldprice">&yen;{{list.price}}</span>
+              </div>
+            </div>
+             <addGoods
+                v-model="list.count"
+                @selecttedgods="selecttedgods(list.id)">
+              </addGoods>
+            <!-- 引入添加商品自定义组件 -->
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+   <beesFooter></beesFooter>
+</div>

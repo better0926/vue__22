@@ -1,0 +1,182 @@
+body {
+  background-color: #ccc;
+}
+.beescart {
+  padding: 1rem /* 54/54 */ 0;
+  height: 100%;
+  position: relative;
+}
+.wrap {
+  height: 100%;
+}
+.wrap ::-webkit-scrollbar {
+  /*隐藏滚轮*/
+  display: none;
+}
+.main-container {
+  background-color: #fff;
+}
+.scroll {
+  overflow-y: scroll;
+  height: 100%;
+}
+.scroll .block {
+  margin-top: 0.185185rem /* 10/54 */;
+  margin-bottom: 0.185185rem /* 10/54 */;
+  width: 100%;
+  height: 1.888889rem /* 102/54 */;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.scroll .addr-table {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 0.259259rem /* 14/54 */;
+  font-weight: normal;
+}
+.scroll .addr-table th {
+  font-weight: normal;
+}
+.scroll .addr-table .arrow-right {
+  font-size: 0.444444rem /* 24/54 */;
+  text-align: right;
+}
+.scroll .fast_cart {
+  position: relative;
+  padding: 0.185185rem /* 10/54 */ 0.37037rem /* 20/54 */;
+  height: 0.740741rem /* 40/54 */;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.222222rem /* 12/54 */;
+  color: #777;
+}
+.scroll .fast_cart .fast-super::before {
+  width: 0.055556rem /* 3/54 */;
+  height: 0.259259rem /* 14/54 */;
+  position: absolute;
+  left: 0.222222rem /* 12/54 */;
+  top: 0.240741rem /* 13/54 */;
+  content: "";
+  background-color: #090;
+}
+.scroll .fast_cart .addBtn {
+  padding: 0.037037rem /* 2/54 */ 0.092593rem /* 5/54 */;
+  border: 1px solid red;
+  border-radius: 0.185185rem /* 10/54 */;
+  color: red;
+}
+.scroll .group-proptext {
+  padding-left: 0.185185rem /* 10/54 */;
+  line-height: 0.703704rem /* 38/54 */;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.259259rem /* 14/54 */;
+  color: #777;
+}
+.scroll .group-receive {
+  height: 0.925926rem /* 50/54 */;
+  line-height: 0.925926rem /* 50/54 */;
+  padding: 0 0.185185rem /* 10/54 */;
+  font-size: 0.259259rem /* 14/54 */;
+  border-bottom: 1px solid #ccc;
+}
+.scroll .group-receive .theme-redfont {
+  color: red;
+}
+.scroll .group-receive .ugroup-receive-ext {
+  float: right;
+}
+.scroll .group-receive .ugroup-receive-ext .arrow-right {
+  font-size: 0.37037rem /* 20/54 */;
+}
+.scroll .group-comment {
+  padding: 0 0.185185rem /* 10/54 */;
+  width: 100%;
+  height: 0.925926rem /* 50/54 */;
+  display: flex;
+  line-height: 0.925926rem /* 50/54 */;
+  border-bottom: 1px solid #ccc;
+}
+.scroll .group-comment .comment-wrapper {
+  flex: 1;
+}
+.scroll .group-comment input[type=text] {
+  padding-left: 0.185185rem /* 10/54 */;
+  width: 100%;
+  height: 0.555556rem /* 30/54 */;
+  border-radius: 0.185185rem /* 10/54 */;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.scroll .list {
+  display: flex;
+  height: 1.851852rem /* 100/54 */;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+.scroll .list .img {
+  width: 60px;
+}
+.scroll .list .center {
+  flex: 1;
+  font-size: 0.296296rem /* 16/54 */;
+}
+.scroll .list .center .price {
+  margin-top: 0.185185rem /* 10/54 */;
+  font-size: 0.259259rem /* 14/54 */;
+}
+.scroll .list .center .price .newprice {
+  color: red;
+  font-weight: bolder;
+}
+.scroll .list .center .price .oldprice {
+  text-decoration: line-through;
+  color: #666;
+}
+.scroll .checkbox {
+  margin-left: 0.37037rem /* 20/54 */;
+  width: 0.555556rem /* 30/54 */;
+  height: 0.555556rem /* 30/54 */;
+  background: url(../../assets/images/check.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.555556rem /* 30/54 */;
+}
+.scroll .checkbox.active {
+  background: url(../../assets/images/checked.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.555556rem /* 30/54 */;
+}
+.scroll .settlement {
+  height: 1rem /* 54/54 */;
+  padding-left: 0.185185rem /* 10/54 */;
+  font-size: 0.296296rem /* 16/54 */;
+  line-height: 1rem /* 54/54 */;
+}
+.scroll .selectAll {
+  padding-left: 0.666667rem /* 36/54 */;
+  display: inline-block;
+  font-size: 0.259259rem /* 14/54 */;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0.555556rem /* 30/54 */;
+}
+.scroll .selectAll-false {
+  background-image: url(../../assets/images/check.png);
+}
+.scroll .active {
+  background-image: url(../../assets/images/checked.png);
+}
+.scroll .theme-redfont {
+  color: red;
+}
+.scroll .chooseOk {
+  float: right;
+  width: 1.851852rem /* 100/54 */;
+  text-align: center;
+  background-color: #090;
+  color: #fff;
+}

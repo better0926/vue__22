@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+a,
+a:active {
+  color: red;
+}
+img {
+  width: 100%;
+}
+.flexbox {
+  display: flex;
+}
+.pd-r {
+  padding-right: 0.185185rem /* 10/54 */;
+}
+.rel {
+  position: relative;
+}
+.abs {
+  position: absolute;
+}

@@ -1,0 +1,86 @@
+<div class="beescart">
+  <!-- 购物车头部 -->
+   <cartHeader/>
+  <div class="wrap">
+    <div class="scroll">
+      <div class="block">
+        <table class="addr-table">
+          <tbody>
+            <tr>
+              <th width="28%">收
+                <span class="ui-hidden"></span>货
+                <span class="ui-hidden"></span>人
+              </th>
+              <td>刘玺&nbsp;先生</td>
+              <td width="17%" rowspan="3" class="more">修改
+                <i class="fa fa-angle-right fa-fw arrow-right"></i>
+              </td>
+            </tr>
+            <tr>
+              <th>电
+                <span class="ui-hidden">&nbsp;&nbsp;&nbsp;&nbsp;</span>话
+              </th>
+              <td>153********</td>
+            </tr>
+            <tr>
+              <th>收货地址
+              </th>
+              <td style="font-weight: 700">上海市浦东新区航头镇航都路18号-黑马程序员</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="main-container">
+        <div class="fast_cart">
+          <span class="fast-super">闪送超市</span>
+          <span class="addBtn">凑单专区</span>
+        </div>
+        <p class="group-proptext theme-border">￥0起送，22点后满￥69运费5元起，不满￥69运10元起</p>
+        <p class="group-receive theme-border">收货时间&nbsp;&nbsp;
+          <span class="theme-redfont">08:00-09:00</span>
+          <span class="ugroup-receive-ext">&nbsp;可预定
+            <i class="fa fa-angle-right fa-fw arrow-right"></i>
+          </span>
+        </p>
+        <div class="group-comment theme-border">
+          收货备注&nbsp;&nbsp;
+          <div class="comment-wrapper">
+            <input type="text" maxlength="100" value="" placeholder="可输入100字以内特殊要求内容">
+          </div>
+        </div>
+        <!-- 购物车列表 -->
+        <div class="main-list">
+          <ul class="main-content">
+            <li class="list" v-for="item in addCartList" :key="item.id">
+              <!-- 选中商品 -->
+              <div class="checkbox" :class="{active:item.isSelected}" @click="toggleId(item.id)"></div>
+              <div class="img">
+                <img :src="item.img" alt="">
+              </div>
+              <div class="center">
+                <p class="tlt">{{item.name}}</p>
+                <div class="price">
+                  <span class="newprice">&yen;{{item.price}}</span>
+                </div>
+              </div>
+              <addGoods v-model="item.count"></addGoods>
+              <!-- 引入添加商品自定义组件 -->
+            </li>
+          </ul>
+        </div>
+
+        <!-- 全选 -->
+        <div class="settlement">
+          <span class="selectAll selectAll-false"
+            :class="{active:$store.getters.selectedAll}"
+            @click="toggleAll">全&nbsp;选</span>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;共:
+          <span class="theme-redfont">{{ totalPrice }}</span>
+          <div class="chooseOk">选好了</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 购物车底部 -->
+   <cartFooter/>
+</div>
